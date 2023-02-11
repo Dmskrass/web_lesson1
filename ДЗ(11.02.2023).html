@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans";
+        }
+
+        .box {
+            width: 355px;
+            margin: auto;
+
+        }
+
+        .inp+span::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 4px;
+            border: 2px solid #b7d1fa;
+            top: -3px;
+            left: -22px;
+
+        }
+
+        .inp:checked+span::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 4px;
+            border: 2px solid #3473eb;
+            top: -3px;
+            left: -22px;
+
+        }
+
+        .inp:checked+span::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 14px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            border-bottom: 4px solid #3473eb;
+            border-right: 4px solid #3473eb;
+            top: -2px;
+            left: -15px;
+            rotate: 45deg;
+        }
+
+
+        .lab {
+            display: block;
+            margin: 25px 30px;
+            position: relative;
+        }
+
+        .inp {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="box">
+            <h1>Я верно выполнил ДЗ?</h1>
+            <label for="ans" class="lab"><input type="radio" id="ans" name="ph" class="inp"><span>Yes</span></label>
+            <label for="ans1" class="lab"><input type="radio" id="ans1" name="ph" class="inp"><span>No</span></label>
+        </div>
+    </form>
+</body>
+
+</html>
